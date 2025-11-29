@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/about.css';
 
 export default function About() {
   const linkedIn = 'https://www.linkedin.com/in/priyadharshini2214';
   const github = 'https://github.com/PRIYA0914';
+  const [showImage, setShowImage] = useState(true);
 
   return (
     <div className="about-content">
@@ -52,7 +53,18 @@ export default function About() {
         </div>
 
         <aside className="about-visual">
-          <div className="about-avatar" aria-hidden="true">PD</div>
+          <div className="about-avatar" aria-hidden="true">
+            {showImage ? (
+              <img
+                src="/assets/avatar.jpg"
+                alt="Priya Dharshini"
+                className="about-avatar-img"
+                onError={() => setShowImage(false)}
+              />
+            ) : (
+              <span className="avatar-initials">PD</span>
+            )}
+          </div>
           <p className="avatar-caption">Full-Stack • UI/UX • MERN</p>
         </aside>
       </div>
