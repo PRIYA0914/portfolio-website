@@ -61,6 +61,52 @@
   background: rgba(11,92,255,0.06);
 }
 
+/* Two-column layout for About */
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  gap: 1.6rem;
+  align-items: start;
+}
+
+.about-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.about-avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-color, #0b5cff), #6f9cff);
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 800;
+  box-shadow: 0 8px 24px rgba(11,92,255,0.12);
+}
+
+.avatar-caption {
+  color: rgba(0,0,0,0.6);
+  font-weight: 600;
+}
+
+@media (max-width: 880px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .about-avatar {
+    width: 120px;
+    height: 120px;
+    font-size: 1.5rem;
+  }
+}
+
 /* Responsive: tighten padding on small screens */
 @media (max-width: 560px) {
   .about-content {
