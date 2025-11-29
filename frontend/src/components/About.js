@@ -56,7 +56,7 @@ export default function About() {
           <div className="about-avatar" aria-hidden="true">
             {showImage ? (
               <img
-                src="/assets/avatar.jpg"
+                src="/assets/avatar.svg"
                 alt="Priya Dharshini"
                 className="about-avatar-img"
                 onError={() => setShowImage(false)}
