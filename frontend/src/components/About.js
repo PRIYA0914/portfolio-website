@@ -7,7 +7,7 @@ export default function About() {
   const [showImage, setShowImage] = useState(true);
 
   return (
-    <div className="about-content">
+    <div id="about" className="about-content">
       <h2 className="section-title">About Me</h2>
 
       <div className="about-layout">
