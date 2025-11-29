@@ -77,7 +77,7 @@
 }
 
 .about-avatar {
-  --avatar-size: 180px;
+  --avatar-size: 240px;
   width: var(--avatar-size);
   height: var(--avatar-size);
   border-radius: 50%;
@@ -105,7 +105,7 @@
     gap: 1rem;
   }
   .about-avatar {
-    --avatar-size: 140px;
+    --avatar-size: 180px;
     font-size: 1.5rem;
   }
 }
