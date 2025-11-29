@@ -59,10 +59,10 @@ export default function Hero() {
         <div className="hero-visual">
           <div className="hero-avatar">
             <img
-              src="/assets/profile.jpg"
+              src={`${process.env.PUBLIC_URL}/assets/profile.jpg`}
               alt="Priya Dharshini"
               className="hero-avatar-img"
-              onError={(e) => { e.currentTarget.src = '/assets/avatar.svg'; }}
+              onError={(e) => { e.currentTarget.src = `${process.env.PUBLIC_URL}/assets/avatar.svg`; }}
             />
           </div>
           <div className="floating-elements">
