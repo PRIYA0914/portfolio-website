@@ -1,0 +1,144 @@
+/* hero.css - styles for the Hero component */
+
+.hero-section {
+  padding: 3rem 1rem;
+  background: linear-gradient(180deg, rgba(11,92,255,0.04), rgba(255,255,255,0));
+  color: var(--text-color, #111);
+}
+
+.hero-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-content {
+  padding: 0.5rem 0;
+}
+
+.greeting-text {
+  display: inline-block;
+  color: rgba(0,0,0,0.6);
+  font-weight: 600;
+}
+
+.hero-title {
+  font-size: 2.4rem;
+  margin: 0.25rem 0;
+  line-height: 1.02;
+}
+
+.name-highlight {
+  color: var(--primary-color, #0b5cff);
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: rgba(0,0,0,0.75);
+  margin-top: 0.3rem;
+}
+
+.hero-description {
+  margin-top: 0.9rem;
+  color: rgba(0,0,0,0.75);
+  max-width: 60ch;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stat-number {
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--primary-color, #0b5cff);
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: rgba(0,0,0,0.6);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.4rem;
+}
+
+.btn {
+  padding: 0.6rem 0.95rem;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--primary-color, #0b5cff);
+  color: #fff;
+  border: none;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.08);
+  color: rgba(0,0,0,0.85);
+}
+
+.hero-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-color, #0b5cff), #6f9cff);
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.floating-elements {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.float-item {
+  background: rgba(255,255,255,0.9);
+  padding: 0.4rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.06);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 880px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+  }
+  .hero-visual {
+    order: -1;
+    justify-self: center;
+  }
+  .hero-title {
+    font-size: 1.8rem;
+  }
+}

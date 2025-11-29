@@ -1,5 +1,6 @@
 // filepath: c:\Users\priya\OneDrive\Documents\Desktop\portfolio\portfolio-website\src\components\Hero.js
 import React from 'react';
+import '../styles/hero.css';
 
 export default function Hero() {
   return (

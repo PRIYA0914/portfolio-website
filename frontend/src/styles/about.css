@@ -1,0 +1,50 @@
+/* about.css - styles for the About component */
+
+.about-content {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.6rem 1.8rem;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  color: var(--text-color, #222);
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+  color: var(--primary-color, #0b5cff);
+}
+
+.about-content p {
+  line-height: 1.7;
+  margin-bottom: 0.9rem;
+  color: rgba(0,0,0,0.85);
+}
+
+.about-content ul {
+  margin: 0.5rem 0 1rem 1.25rem;
+  padding: 0;
+}
+
+.about-content li {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+/* make emoji spacing consistent */
+.about-content li::marker {
+  font-size: 1rem;
+}
+
+/* Responsive: tighten padding on small screens */
+@media (max-width: 560px) {
+  .about-content {
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  .section-title {
+    font-size: 1.4rem;
+  }
+}
