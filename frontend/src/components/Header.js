@@ -6,7 +6,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'skills', 'projects', 'experience', 'education', 'contact'];
+      const sections = ['home', 'skills', 'projects', 'experience', 'education', 'contact', 'about'];
       const scrollPosition = window.scrollY + 100;
 
       sections.forEach(section => {
@@ -45,7 +45,8 @@ export default function Header() {
             { id: 'projects', label: 'Projects' },
             { id: 'experience', label: 'Experience' },
             { id: 'education', label: 'Education' },
-            { id: 'contact', label: 'Contact' }
+            { id: 'contact', label: 'Contact' },
+            { id: 'about', label: 'About' }
           ].map(item => (
             <li key={item.id}>
               <button
