@@ -1,8 +1,17 @@
 // filepath: c:\Users\priya\OneDrive\Documents\Desktop\portfolio\portfolio-website\src\components\Hero.js
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/hero.css';
 
 export default function Hero() {
+  const titles = ['Full-Stack Developer', 'UI/UX Designer', 'MERN Stack Engineer', 'React Native Dev'];
+  const [titleIndex, setTitleIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTitleIndex((i) => (i + 1) % titles.length);
+    }, 2800);
+    return () => clearInterval(timer);
+  }, []);
   return (
     <section id="home" className="hero-section">
       <div className="hero-container">
@@ -13,9 +22,7 @@ export default function Hero() {
           <h1 className="hero-title">
             <span className="name-highlight">Priya Dharshini S</span>
           </h1>
-          <h2 className="hero-subtitle">
-            Full-Stack Developer & UI/UX Designer
-          </h2>
+          <h2 className="hero-subtitle" aria-live="polite">{titles[titleIndex]}</h2>
           <p className="hero-description">
             I create modern, responsive web applications using the MERN stack and React Native. 
             Passionate about clean code, intuitive design, and seamless user experiences.
@@ -51,7 +58,7 @@ export default function Hero() {
         </div>
         <div className="hero-visual">
           <div className="hero-avatar">
-            <span>PD</span>
+            <img src="/assets/avatar.svg" alt="Priya Dharshini" className="hero-avatar-img" />
           </div>
           <div className="floating-elements">
             <div className="float-item">React</div>
