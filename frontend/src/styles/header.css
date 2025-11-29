@@ -46,7 +46,7 @@
 
 .brand-text {
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.2rem; /* Slightly larger brand text */
   color: var(--text-color, #111);
 }
 
@@ -70,6 +70,7 @@
   border-radius: 10px;
   cursor: pointer;
   font-weight: 600;
+  font-size: 1.1rem; /* Slightly larger text */
   transition: background 120ms ease, color 120ms ease, transform 120ms ease;
 }
 
@@ -98,9 +99,13 @@
     gap: 0.25rem;
     overflow-x: auto;
     -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    /* scrollbar-width: none; - removed for broader compatibility, relying on ::-webkit-scrollbar */
   }
-  .navbar-nav::-webkit-scrollbar { display: none; }
+  .navbar-nav::-webkit-scrollbar { 
+    display: none; /* Chrome, Safari, Edge */
+    width: 0;
+    height: 0;
+  }
   .brand-text {
     display: none;
   }

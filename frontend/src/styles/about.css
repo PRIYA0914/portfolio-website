@@ -138,3 +138,18 @@
     font-size: 1.4rem;
   }
 }
+
+/* about-avatar size */
+.about-avatar {
+  width: 450px; /* Larger size for desktop */
+  height: 450px;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .about-avatar {
+    width: 350px; /* Larger size for mobile */
+    height: 350px;
+  }
+}

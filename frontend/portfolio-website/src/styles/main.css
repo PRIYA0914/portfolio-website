@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.prompt {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(135deg, #6e7f80, #3b4d4f);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.navbar a:hover {
+  transform: translateZ(30px) rotateY(10deg);
+}
+
+.main {
+  padding: 20px;
+}
