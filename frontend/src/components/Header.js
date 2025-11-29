@@ -3,11 +3,14 @@ import '../styles/header.css';
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState('home');
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['home', 'skills', 'projects', 'experience', 'education', 'contact', 'about'];
       const scrollPosition = window.scrollY + 100;
+
+      setScrolled(window.scrollY > 12);
 
       sections.forEach(section => {
         const element = document.getElementById(section);
@@ -21,6 +24,8 @@ export default function Header() {
     };
 
     window.addEventListener('scroll', handleScroll);
+    // run once to set initial active section / scrolled state
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -32,7 +37,7 @@ export default function Header() {
   };
 
   return (
-    <header className="header">
+    <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <nav className="navbar">
         <div className="navbar-brand">
           <span className="brand-icon">PD</span>
