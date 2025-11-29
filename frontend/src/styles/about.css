@@ -37,6 +37,30 @@
   font-size: 1rem;
 }
 
+.about-actions {
+  display: flex;
+  gap: 0.8rem;
+  margin: 1rem 0 0.6rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.6rem;
+}
+
+.social-link {
+  color: var(--primary-color, #0b5cff);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+}
+
+.social-link:hover {
+  background: rgba(11,92,255,0.06);
+}
+
 /* Responsive: tighten padding on small screens */
 @media (max-width: 560px) {
   .about-content {

@@ -2,6 +2,9 @@ import React from 'react';
 import '../styles/about.css';
 
 export default function About() {
+  const linkedIn = 'https://www.linkedin.com/in/priyadharshini2214';
+  const github = 'https://github.com/PRIYA0914';
+
   return (
     <div className="about-content">
       <h2 className="section-title">About Me</h2>
@@ -19,6 +22,27 @@ export default function About() {
         <li>🎨 Passionate about clean code and beautiful interfaces</li>
         <li>🤝 Collaborative, detail-oriented, and always eager to learn</li>
       </ul>
+
+      <div className="about-actions">
+        <button
+          className="btn btn-primary"
+          onClick={() => {
+            const el = document.getElementById('contact');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
+          Contact Me
+        </button>
+        <a className="btn btn-outline" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+          Download Resume
+        </a>
+      </div>
+
+      <div className="social-links">
+        <a className="social-link" href={linkedIn} target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
+        <a className="social-link" href={github} target="_blank" rel="noopener noreferrer">🐙 GitHub</a>
+      </div>
+
       <p>
         Let’s connect and create something amazing together!
       </p>
