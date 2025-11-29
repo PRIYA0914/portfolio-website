@@ -37,7 +37,8 @@ export default function About() {
             >
               Contact Me
             </button>
-            <a className="btn btn-outline" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            {/* Direct download link as a reliable fallback (browser handles it) */}
+            <a className="btn btn-outline" href="/resume.pdf" download="Priya_Dharshini_Resume.pdf">
               Download Resume
             </a>
           </div>

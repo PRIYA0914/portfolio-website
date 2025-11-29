@@ -51,8 +51,7 @@ export default function Header() {
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <nav className="navbar">
         <div className="navbar-brand">
-          <span className="brand-icon">PD</span>
-          <span className="brand-text">Priya Dharshini</span>
+          <div className="brand-text">Priya Dharshini</div>
         </div>
         <button
           className="mobile-toggle"

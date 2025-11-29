@@ -64,7 +64,8 @@
 /* Two-column layout for About */
 .about-layout {
   display: grid;
-  grid-template-columns: 1fr 240px;
+  /* allow the visual column to grow but cap its size so it doesn't overlap text */
+  grid-template-columns: 1fr minmax(160px, 320px);
   gap: 1.6rem;
   align-items: start;
 }
@@ -77,16 +78,17 @@
 }
 
 .about-avatar {
-  --avatar-size: 320px;
-  width: var(--avatar-size);
-  height: var(--avatar-size);
+  /* make the avatar size responsive to its column width */
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, var(--avatar-bg, #ff6b6b), #ff9b9b);
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.9rem;
   font-weight: 800;
   box-shadow: 0 10px 28px rgba(255,107,107,0.14);
   overflow: hidden;
@@ -139,17 +141,28 @@
   }
 }
 
-/* about-avatar size */
-.about-avatar {
-  width: 450px; /* Larger size for desktop */
-  height: 450px;
-  border-radius: 50%;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+.about-visual .avatar-caption {
+  margin-top: 0.25rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 880px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
   .about-avatar {
-    width: 350px; /* Larger size for mobile */
-    height: 350px;
+    max-width: 240px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .about-content {
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  .section-title {
+    font-size: 1.4rem;
   }
 }
