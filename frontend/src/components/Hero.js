@@ -1,6 +1,7 @@
 // filepath: c:\Users\priya\OneDrive\Documents\Desktop\portfolio\portfolio-website\src\components\Hero.js
 import React from 'react';
 
+
 export default function Hero() {
   return (
     <section id="home" className="hero-section">

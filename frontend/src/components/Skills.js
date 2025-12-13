@@ -1,74 +1,64 @@
 import React from 'react';
+import '../styles/skills.css';
 
-const SKILL_CATEGORIES = [
+const SKILL_TREE = [
 	{
-		title: 'Frontend Development',
+		label: 'Programming',
 		skills: [
-			{ name: 'React.js', level: 90 },
-			{ name: 'JavaScript', level: 85 },
-			{ name: 'HTML/CSS', level: 95 },
-			{ name: 'React Native', level: 80 }
+			'C', 'C++', 'PYTHON', 'JAVASCRIPT', 'JAVA'
 		]
 	},
 	{
-		title: 'Backend Development',
+		label: 'Frontend',
 		skills: [
-			{ name: 'Node.js', level: 85 },
-			{ name: 'Express.js', level: 80 },
-			{ name: 'Python', level: 75 },
-			{ name: 'Django', level: 70 }
+			'HTML', 'CSS', 'REACT.JS', 'TAILWIND'
 		]
 	},
 	{
-		title: 'Database & Tools',
+		label: 'Backend',
 		skills: [
-			{ name: 'MongoDB', level: 80 },
-			{ name: 'SQL', level: 70 },
-			{ name: 'Git/GitHub', level: 90 },
-			{ name: 'Figma', level: 85 }
+			'NODE.JS', 'EXPRESS.JS', 'MONGODB'
 		]
 	},
 	{
-		title: 'Programming Languages',
+		label: 'Mobile App Development',
 		skills: [
-			{ name: 'Java', level: 80 },
-			{ name: 'C/C++', level: 75 },
-			{ name: 'Swift', level: 60 }
+			'REACT NATIVE'
+		]
+	},
+	{
+		label: 'Tools & Platforms',
+		skills: [
+			'GITHUB', 'VS CODE', 'FIGMA', 'REST APIS'
+		]
+	},
+	{
+		label: 'Other',
+		skills: [
+			'UI/UX DESIGNING', 'TEAM COLLABORATION', 'RESPONSIVE DESIGN'
 		]
 	}
 ];
 
 export default function Skills() {
 	return (
-		<section id="skills" className="skills-section">
-			<div className="container">
-				<div className="section-header">
-					<h2 className="section-title">Technical Skills</h2>
-					<p className="section-subtitle">Technologies and tools I work with</p>
-				</div>
-				<div className="skills-grid">
-					{SKILL_CATEGORIES.map((category, index) => (
-						<div key={index} className="skill-category">
-							<h3 className="category-title">{category.title}</h3>
-							<div className="skills-list">
-								{category.skills.map((skill, skillIndex) => (
-									<div key={skillIndex} className="skill-item">
-										<div className="skill-info">
-											<span className="skill-name">{skill.name}</span>
-											<span className="skill-percentage">{skill.level}%</span>
-										</div>
-										<div className="skill-bar">
-											<div
-												className="skill-progress"
-												style={{ width: `${skill.level}%` }}
-											></div>
-										</div>
-									</div>
-								))}
-							</div>
-						</div>
-					))}
-				</div>
+		<section id="skills" className="skills-cards-section">
+			<h2 className="skills-cards-title">Technical Skills</h2>
+			<div className="skills-cards-grid">
+        {SKILL_TREE.map((branch, idx) => (
+          <div className="skill-card" key={branch.label} data-category={branch.label}>
+            <div className="skill-card-header">
+              <h3 className="skill-card-title">{branch.label}</h3>
+            </div>
+            <div className="skill-card-content">
+              <div className="skill-card-pills">
+                {branch.skills.map(skill => (
+                  <span className="skill-pill" key={skill}>{skill}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
 			</div>
 		</section>
 	);
