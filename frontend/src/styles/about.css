@@ -2,58 +2,42 @@
 .about-section {
   background: #ffffff;
   color: #1e293b;
-  padding: 50px 20px;
+  padding: 80px 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  min-height: 40vh;
+  align-items: center;
+  min-height: 60vh;
 }
 
-
-
-.about-profile-pic {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: #f1f5f9;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  border: 3px solid #e0e7ff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.about-profile-pic img {
+.about-container {
+  max-width: 1200px;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
 }
 
 .about-content {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
+  text-align: left;
 }
 
 .about-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: #1e293b;
   margin-bottom: 0.5rem;
   letter-spacing: -0.5px;
 }
 .about-subtitle {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 500;
   color: #64748b;
   margin-bottom: 1.5rem;
   letter-spacing: 0.01em;
 }
 .about-description {
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.8;
   color: #475569;
   margin-top: 0.5rem;
@@ -63,22 +47,67 @@
   font-weight: 600;
 }
 
-@media (max-width: 600px) {
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.2);
+  border: 4px solid #e0e7ff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 40px rgba(99, 102, 241, 0.3);
+}
+
+@media (max-width: 768px) {
   .about-section {
-    padding: 40px 20px;
-    min-height: 30vh;
+    padding: 60px 20px;
+    min-height: 50vh;
   }
-  .about-profile-pic {
-    width: 80px;
-    height: 80px;
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  .about-content {
+    order: 2;
+  }
+  .about-image {
+    order: 1;
+  }
+  .about-image img {
+    width: 180px;
+    height: 180px;
   }
   .about-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .about-subtitle {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .about-description {
-    font-size: 0.9rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 40px 20px;
+  }
+  .about-image img {
+    width: 150px;
+    height: 150px;
+  }
+  .about-title {
+    font-size: 1.8rem;
   }
 }
