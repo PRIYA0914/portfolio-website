@@ -1,40 +1,26 @@
 /* About Section Styles */
 .about-section {
-  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+  background: #ffffff;
   color: #1e293b;
-  padding: 70px 0;
+  padding: 50px 20px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  min-height: 40vh;
 }
 
-.about-card {
-  background: #fff;
-  border-radius: 2rem;
-  box-shadow: 0 8px 32px rgba(99,102,241,0.13), 0 2px 12px rgba(0,0,0,0.06);
-  max-width: 1100px;
-  width: 200vw;
-  margin: 2rem auto;
- 
-  
-  border-left: 6px solid #6366f1;
-  transition: box-shadow 0.3s, transform 0.3s;
-}
-.about-card:hover {
-  box-shadow: 0 12px 40px rgba(99,102,241,0.18), 0 4px 16px rgba(0,0,0,0.10);
-  transform: translateY(-4px) scale(1.01);
-}
+
 
 .about-profile-pic {
-  width: 160px;
-  height: 160px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: 0 4px 24px #6366f133;
-  margin-bottom: 0;
-  flex-shrink: 0;
-  border: 3px solid #e0e7ff;
   background: #f1f5f9;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  border: 3px solid #e0e7ff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,69 +33,52 @@
 }
 
 .about-content {
-  text-align: left;
-  flex: 1;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
 }
+
 .about-title {
-  font-size: 2.5rem;
-  font-weight: 800;
+  font-size: 2rem;
+  font-weight: 700;
   color: #1e293b;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
   letter-spacing: -0.5px;
-  position: relative;
-}
-.about-title::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, #6366f1 60%, #a5b4fc 100%);
-  border-radius: 2px;
-  margin-top: 0.5rem;
 }
 .about-subtitle {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #6366f1;
-  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #64748b;
+  margin-bottom: 1.5rem;
   letter-spacing: 0.01em;
 }
 .about-description {
-  font-size: 1.15rem;
+  font-size: 1rem;
   line-height: 1.8;
-  color: #334155;
+  color: #475569;
+  margin-top: 0.5rem;
 }
 .about-description b {
-  color: #6366f1;
+  color: #2563eb;
   font-weight: 600;
 }
 
-@media (max-width: 900px) {
-  .about-card {
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 1rem;
-    gap: 1.5rem;
-  }
-  .about-content {
-    text-align: center;
-  }
-  .about-title::after {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 @media (max-width: 600px) {
-  .about-card {
-    padding: 1.2rem 0.5rem;
-    border-left: 4px solid #6366f1;
-  }
-  .about-title {
-    font-size: 1.4rem;
+  .about-section {
+    padding: 40px 20px;
+    min-height: 30vh;
   }
   .about-profile-pic {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
+  }
+  .about-title {
+    font-size: 1.5rem;
+  }
+  .about-subtitle {
+    font-size: 0.9rem;
+  }
+  .about-description {
+    font-size: 0.9rem;
   }
 }
