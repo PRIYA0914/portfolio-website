@@ -1,9 +1,9 @@
-/* Experience Section - Modern Card, Dark Theme */
+/* Experience Section - Modern Card, Light Theme */
 .experience-section {
-  background: #10182a;
-  color: #e0e6f6;
+  background: #ffffff;
+  color: #1e293b;
   border-radius: 1.2rem;
-  box-shadow: 0 2px 24px rgba(0,0,0,0.18);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.08);
   padding: 2.5rem 1.5rem 2.5rem 1.5rem;
   margin-bottom: 3.5rem;
   max-width: 900px;
@@ -22,11 +22,11 @@
   margin-top: 2em;
 }
 .timeline-item {
-  background: #181f33;
+  background: #f8fafc;
   border-radius: 1em;
-  box-shadow: 0 1px 8px #0002;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.04);
   padding: 1.2em 1.5em;
-  color: #b6bfff;
+  color: #334155;
   position: relative;
 }
 .timeline-marker {
@@ -35,9 +35,9 @@
   top: 1.2em;
   width: 1em;
   height: 1em;
-  background: #2563eb;
+  background: #6366f1;
   border-radius: 50%;
-  box-shadow: 0 0 8px #2563eb99;
+  box-shadow: 0 0 8px rgba(99,102,241,0.3);
 }
 .experience-header {
   display: flex;
@@ -53,23 +53,23 @@
 .experience-title {
   font-size: 1.15em;
   font-weight: 600;
-  color: #7ecfff;
+  color: #6366f1;
 }
 .experience-type {
-  background: #232c47;
-  color: #7ecfff;
+  background: #e0e7ff;
+  color: #6366f1;
   border-radius: 2em;
   padding: 0.35em 1em;
   font-size: 0.98em;
   font-weight: 500;
   letter-spacing: 0.02em;
-  box-shadow: 0 1px 6px #0002;
+  box-shadow: 0 1px 6px rgba(99,102,241,0.1);
 }
 .experience-meta {
   display: flex;
   gap: 1.2em;
   font-size: 0.98em;
-  color: #b6bfff;
+  color: #64748b;
 }
 .achievements-list {
   display: flex;
@@ -78,12 +78,12 @@
   margin: 0.7em 0;
 }
 .achievement-pill {
-  background: #232c47;
-  color: #7ecfff;
+  background: #e0e7ff;
+  color: #6366f1;
   border-radius: 2em;
   padding: 0.35em 1em;
   font-size: 0.98em;
   font-weight: 500;
   letter-spacing: 0.02em;
-  box-shadow: 0 1px 6px #0002;
+  box-shadow: 0 1px 6px rgba(99,102,241,0.1);
 }

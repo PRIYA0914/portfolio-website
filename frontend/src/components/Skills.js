@@ -1,51 +1,32 @@
-import React from 'react';
-import '../styles/skills.css';
+
+import React from "react";
+import "./skills.css";
 
 const SKILL_TREE = [
-	{
-		label: 'Programming',
-		skills: [
-			'C', 'C++', 'PYTHON', 'JAVASCRIPT', 'JAVA'
-		]
-	},
-	{
-		label: 'Frontend',
-		skills: [
-			'HTML', 'CSS', 'REACT.JS', 'TAILWIND'
-		]
-	},
-	{
-		label: 'Backend',
-		skills: [
-			'NODE.JS', 'EXPRESS.JS', 'MONGODB'
-		]
-	},
-	{
-		label: 'Mobile App Development',
-		skills: [
-			'REACT NATIVE'
-		]
-	},
-	{
-		label: 'Tools & Platforms',
-		skills: [
-			'GITHUB', 'VS CODE', 'FIGMA', 'REST APIS'
-		]
-	},
-	{
-		label: 'Other',
-		skills: [
-			'UI/UX DESIGNING', 'TEAM COLLABORATION', 'RESPONSIVE DESIGN'
-		]
-	}
+  {
+    label: "Frontend",
+    skills: ["HTML", "CSS", "JAVASCRIPT", "REACT", "REACT NATIVE"]
+  },
+  {
+    label: "Backend",
+    skills: ["NODEJS", "EXPRESS", "JAVA", "MONGODB"]
+  },
+  {
+    label: "Tools & Platforms",
+    skills: ["GIT", "GITHUB", "VS CODE", "FIGMA", "REST APIS"]
+  },
+  {
+    label: "Other",
+    skills: ["PROBLEM SOLVING", "TEAM COLLABORATION", "RESPONSIVE DESIGN"]
+  }
 ];
 
-export default function Skills() {
-	return (
-		<section id="skills" className="skills-cards-section">
-			<h2 className="skills-cards-title">Technical Skills</h2>
-			<div className="skills-cards-grid">
-        {SKILL_TREE.map((branch, idx) => (
+function Skills() {
+  return (
+    <section className="skills-cards-section">
+      <h2 className="skills-cards-title">Technical Skills</h2>
+      <div className="skills-cards-grid">
+        {SKILL_TREE.map((branch) => (
           <div className="skill-card" key={branch.label} data-category={branch.label}>
             <div className="skill-card-header">
               <h3 className="skill-card-title">{branch.label}</h3>
@@ -59,7 +40,9 @@ export default function Skills() {
             </div>
           </div>
         ))}
-			</div>
-		</section>
-	);
+      </div>
+    </section>
+  );
 }
+
+export default Skills;

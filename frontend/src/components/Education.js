@@ -18,53 +18,14 @@ const EDUCATION = [
       "Mobile Application Development",
       "Computer Networks"
     ],
-    projects: [
-      "Inventory Management System (Final Year Project)",
-      "Chat Application with Real-time Features",
-      "E-commerce Web Application"
-    ]
-  },
-  {
-    degree: "Higher Secondary Education",
-    institution: "Government Higher Secondary School",
-    period: "2019 - 2021",
-    location: "Salem, Tamil Nadu",
-    status: "Completed",
-    percentage: "92%",
-    description: "Completed with Computer Science as major subject.",
-    subjects: [
-      "Computer Science",
-      "Mathematics",
-      "Physics",
-      "Chemistry",
-      "English"
-    ]
+  
   }
 ];
 
-const CERTIFICATIONS = [
-  {
-    title: "React Developer Certification",
-    issuer: "Meta (Facebook)",
-    date: "2023",
-    credential: "ABC123XYZ"
-  },
-  {
-    title: "Full Stack Web Development",
-    issuer: "FreeCodeCamp",
-    date: "2023",
-    credential: "DEF456ABC"
-  },
-  {
-    title: "UI/UX Design Fundamentals",
-    issuer: "Google",
-    date: "2022",
-    credential: "GHI789DEF"
-  }
-];
+
 
 const EDU_ICON = <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="10" rx="5" fill="#2563eb"/><rect x="7" y="11" width="10" height="2" rx="1" fill="#fff"/></svg>;
-const CERT_ICON = <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#2563eb"/><rect x="8" y="8" width="8" height="8" rx="2" fill="#fff"/></svg>;
+// const CERT_ICON removed (no longer needed)
 
 export default function Education() {
   return (
@@ -128,11 +89,11 @@ export default function Education() {
                   </div>
                 )}
                 {edu.projects && (
-                  <div className="academic-projects">
-                    <h5>Academic Projects:</h5>
-                    <ul>
+                  <div className="projects">
+                    <h5>Projects:</h5>
+                    <ul className="projects-list">
                       {edu.projects.map((project, projectIndex) => (
-                        <li key={projectIndex}>{project}</li>
+                        <li key={projectIndex} className="project-item">{project}</li>
                       ))}
                     </ul>
                   </div>
@@ -141,25 +102,7 @@ export default function Education() {
             ))}
           </div>
         </div>
-        {/* Certifications */}
-        <div className="certifications-group">
-          <h3 className="group-title"><span className="group-icon">{CERT_ICON}</span> Certifications</h3>
-          <div className="certifications-grid">
-            {CERTIFICATIONS.map((cert, index) => (
-              <div key={index} className="certification-card card">
-                <h4 className="cert-title">{cert.title}</h4>
-                <div className="cert-meta">
-                  <span className="cert-issuer">{cert.issuer}</span>
-                  <span className="cert-date">{cert.date}</span>
-                </div>
-                <div className="cert-credential">
-                  <span className="credential-label">Credential ID:</span>
-                  <span className="credential-id">{cert.credential}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+
       </div>
     </section>
   );

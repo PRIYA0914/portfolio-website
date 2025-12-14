@@ -1,64 +1,115 @@
-/* About Section - Modern Card, Dark Theme */
+/* About Section Styles */
 .about-section {
-  background: #10182a;
-  color: #e0e6f6;
-  border-radius: 1.2rem;
-  box-shadow: 0 2px 24px rgba(0,0,0,0.18);
-  padding: 2.5rem 1.5rem 2.5rem 1.5rem;
-  margin-bottom: 3.5rem;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+  color: #1e293b;
+  padding: 70px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-card {
+  background: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(99,102,241,0.13), 0 2px 12px rgba(0,0,0,0.06);
+  max-width: 1100px;
+  width: 200vw;
+  margin: 2rem auto;
+ 
+  
+  border-left: 6px solid #6366f1;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.about-card:hover {
+  box-shadow: 0 12px 40px rgba(99,102,241,0.18), 0 4px 16px rgba(0,0,0,0.10);
+  transform: translateY(-4px) scale(1.01);
+}
+
+.about-profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 24px #6366f133;
+  margin-bottom: 0;
+  flex-shrink: 0;
+  border: 3px solid #e0e7ff;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-content {
+  text-align: left;
+  flex: 1;
+}
+.about-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 0.3rem;
+  letter-spacing: -0.5px;
   position: relative;
 }
-.about-header {
-  text-align: center;
-  margin-bottom: 2.2rem;
+.about-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #6366f1 60%, #a5b4fc 100%);
+  border-radius: 2px;
+  margin-top: 0.5rem;
 }
-.about-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #181f33;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  box-shadow: 0 2px 8px #181f33cc;
-  margin: 0 auto 0.7rem auto;
+.about-subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #6366f1;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.01em;
 }
-.about-content-text {
-  font-size: 1.08rem;
-  color: #b6bfff;
-  line-height: 1.7;
-  background: #181f33;
-  border-radius: 0.7em;
-  padding: 1.2em 1.5em;
-  box-shadow: 0 1px 8px #0002;
+.about-description {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #334155;
 }
-.about-list {
-  list-style: none;
-  padding: 0;
-  margin: 1.2rem 0 1.2rem 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.7em;
-  justify-content: center;
+.about-description b {
+  color: #6366f1;
+  font-weight: 600;
 }
-.about-list li {
-  background: #232c47;
-  color: #7ecfff;
-  border-radius: 2em;
-  padding: 0.45em 1.2em;
-  font-size: 1.02em;
-  font-weight: 500;
-  letter-spacing: 0.03em;
-  box-shadow: 0 1px 6px #0002;
-  margin-bottom: 0.5em;
-  display: flex;
-  align-items: center;
-  gap: 0.7em;
+
+@media (max-width: 900px) {
+  .about-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+  }
+  .about-content {
+    text-align: center;
+  }
+  .about-title::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
-.about-list-icon {
-  font-size: 1.2em;
-  margin-right: 0.3em;
+
+@media (max-width: 600px) {
+  .about-card {
+    padding: 1.2rem 0.5rem;
+    border-left: 4px solid #6366f1;
+  }
+  .about-title {
+    font-size: 1.4rem;
+  }
+  .about-profile-pic {
+    width: 90px;
+    height: 90px;
+  }
 }

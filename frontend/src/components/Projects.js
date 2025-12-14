@@ -3,26 +3,64 @@ import React from 'react';
 
 const PROJECTS = [
   {
+    title: "Online Cake Order System",
+    description: "Developed a full-stack web application for online cake ordering with user authentication and cart functionality. Implemented RESTful APIs and MongoDB schemas for order management and real-time tracking. Built an admin panel to manage products, orders, and users efficiently.",
+    tech: ["MERN Stack"],
+    features: [
+      "User authentication and cart functionality",
+      "RESTful APIs and MongoDB schemas",
+      "Order management and real-time tracking",
+      "Admin panel for products, orders, users"
+    ],
+    status: "Internship: iNeuron Intelligence Pvt Ltd (Nov 2024)",
+    link: "#"
+  },
+  {
     title: "Inventory Management System",
-    description: "A comprehensive inventory management application built with MERN stack featuring real-time updates, analytics dashboard, and multi-user support.",
-    tech: ["React", "Node.js", "MongoDB", "Express", "Socket.io"],
-    features: ["Real-time inventory tracking", "Analytics dashboard", "Multi-user authentication", "Export functionality"],
+    description: "Designed and developed an inventory tracking system for an electronics shop. Implemented separate Admin and User panels with secure authentication. Integrated Async Storage to support offline access and persistent data storage.",
+    tech: ["MERN Stack", "React Native"],
+    features: [
+      "Inventory tracking for electronics shop",
+      "Admin and User panels with authentication",
+      "Offline access with Async Storage"
+    ],
     status: "Completed",
     link: "#"
   },
   {
     title: "Secure Chat Application",
-    description: "End-to-end encrypted chat application with group messaging, file sharing, and real-time notifications built with React Native.",
-    tech: ["React Native", "Node.js", "Socket.io", "Express", "MongoDB"],
-    features: ["End-to-end encryption", "Group messaging", "File sharing", "Push notifications"],
-    status: "In Development",
+    description: "Built a real-time encrypted messaging application using WebSockets. Implemented Ghost Mode for enhanced privacy and secure communication. Focused on fast message delivery and real-time user interaction.",
+    tech: ["Express.js", "Socket.io"],
+    features: [
+      "Real-time encrypted messaging",
+      "Ghost Mode for privacy",
+      "Fast message delivery and real-time interaction"
+    ],
+    status: "Completed",
     link: "#"
   },
   {
-    title: "Personal Portfolio Website",
-    description: "Responsive portfolio website showcasing my skills, projects, and experience with modern UI/UX design principles.",
-    tech: ["React", "CSS3", "JavaScript", "Figma"],
-    features: ["Responsive design", "Smooth animations", "Modern UI", "Contact form"],
+    title: "Food Go – UI/UX Design Project",
+    description: "Designed a clean and intuitive food delivery app interface. Created optimized user flows, wireframes, and interactive prototypes. Focused on usability, visual hierarchy, and smooth user experience.",
+    tech: ["Figma"],
+    features: [
+      "Clean and intuitive UI",
+      "Optimized user flows and wireframes",
+      "Interactive prototypes",
+      "Focus on usability and visual hierarchy"
+    ],
+    status: "Design Project",
+    link: "#"
+  },
+  {
+    title: "Mini Projects",
+    description: "A collection of small utility and logic-based apps to strengthen React Native skills.",
+    tech: ["React Native"],
+    features: [
+      "To-Do List App – Task management with add, edit, delete, and local storage.",
+      "Tic Tac Toe Game – Logic-based game to strengthen state management skills.",
+      "Stopwatch App – Utility app with start, pause, reset functionality."
+    ],
     status: "Completed",
     link: "#"
   }

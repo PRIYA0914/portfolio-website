@@ -1,9 +1,9 @@
-/* Hero Section - Modern Card, Dark Theme */
+/* Hero Section - Modern Card, Light Theme */
 .hero-section {
-  background: #10182a;
-  color: #e0e6f6;
+  background: #ffffff;
+  color: #1e293b;
   border-radius: 1.2rem;
-  box-shadow: 0 2px 24px rgba(0,0,0,0.18);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.08);
   padding: 2.5rem 1.5rem 2.5rem 1.5rem;
   margin-bottom: 3.5rem;
   max-width: 900px;
@@ -23,16 +23,16 @@
 .hero-title {
   font-size: 2.2em;
   font-weight: 700;
-  color: #b6bfff;
+  color: #6366f1;
   margin-bottom: 0.3em;
 }
 .hero-subtitle {
   font-size: 1.3em;
-  color: #7ecfff;
+  color: #6366f1;
   margin-bottom: 0.7em;
 }
 .hero-description {
-  color: #b6bfff;
+  color: #64748b;
   margin-bottom: 1.2em;
 }
 .hero-stats {
@@ -42,14 +42,14 @@
   margin-bottom: 1.2em;
 }
 .stat-item {
-  background: #232c47;
-  color: #7ecfff;
+  background: #e0e7ff;
+  color: #6366f1;
   border-radius: 2em;
   padding: 0.45em 1.2em;
   font-size: 1.02em;
   font-weight: 500;
   letter-spacing: 0.03em;
-  box-shadow: 0 1px 6px #0002;
+  box-shadow: 0 1px 6px rgba(99,102,241,0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,11 +57,11 @@
 .stat-number {
   font-size: 1.3em;
   font-weight: 700;
-  color: #38bdf8;
+  color: #6366f1;
 }
 .stat-label {
   font-size: 0.95em;
-  color: #b6bfff;
+  color: #6366f1;
 }
 .hero-actions {
   display: flex;
@@ -78,8 +78,8 @@
   box-shadow: 0 1px 6px #0002;
 }
 .hero-avatar {
-  background: #232c47;
-  color: #7ecfff;
+  background: #6366f1;
+  color: #ffffff;
   border-radius: 50%;
   width: 80px;
   height: 80px;
@@ -98,12 +98,12 @@
   margin-top: 1em;
 }
 .float-item {
-  background: #232c47;
-  color: #b6bfff;
+  background: #e0e7ff;
+  color: #6366f1;
   border-radius: 2em;
   padding: 0.35em 1em;
   font-size: 0.98em;
   font-weight: 500;
   letter-spacing: 0.02em;
-  box-shadow: 0 1px 6px #0002;
+  box-shadow: 0 1px 6px rgba(99,102,241,0.1);
 }

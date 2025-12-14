@@ -53,12 +53,12 @@ function Contact() {
 
   return (
     <section id="contact" className="contact-section">
-      <div style={{ maxWidth: 700, margin: "0 auto", background: "#fff", borderRadius: 16, boxShadow: "0 4px 24px rgba(0,0,0,0.08)", padding: 32 }}>
+      <div className="contact-container">
         <div className="section-header">
-          <h2 style={{ textAlign: "center", marginBottom: 24, fontWeight: 700, fontSize: 32, letterSpacing: 1 }}>Contact</h2>
-          <p style={{ textAlign: "center", marginBottom: 24 }}>Let's discuss your project or just say hello!</p>
+          <h2 className="contact-title">Contact</h2>
+          <p className="contact-subtitle">Let's discuss your project or just say hello!</p>
         </div>
-        <div className="contact-content">
+        <div className="contact-content contact-row">
           <div className="contact-info card">
             <h3>Contact Information</h3>
             <p className="contact-intro">
@@ -109,7 +109,6 @@ function Contact() {
                     onChange={handleChange}
                     required
                     placeholder="Your full name"
-                    style={{ padding: 12, borderRadius: 8, border: "1px solid #ccc", fontSize: 16 }}
                   />
                 </div>
                 <div className="form-group">
@@ -122,7 +121,6 @@ function Contact() {
                     onChange={handleChange}
                     required
                     placeholder="your.email@example.com"
-                    style={{ padding: 12, borderRadius: 8, border: "1px solid #ccc", fontSize: 16 }}
                   />
                 </div>
               </div>
@@ -136,10 +134,9 @@ function Contact() {
                   required
                   rows="6"
                   placeholder="Tell me about your project or just say hello!"
-                  style={{ padding: 12, borderRadius: 8, border: "1px solid #ccc", fontSize: 16, resize: "vertical" }}
                 ></textarea>
               </div>
-              <button type="submit" className="btn btn-primary btn-full" style={{ background: "#22223b", color: "#fff", border: "none", borderRadius: 8, padding: "12px 0", fontWeight: 600, fontSize: 18, cursor: "pointer", marginTop: 8 }}>
+              <button type="submit" className="btn btn-primary btn-full">
                 Send Message
               </button>
             </form>

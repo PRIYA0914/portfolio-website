@@ -1,9 +1,9 @@
-/* Projects Section - Modern Card, Dark Theme */
+/* Projects Section - Modern Card, Light Theme */
 .projects-section {
-  background: #10182a;
-  color: #e0e6f6;
+  background: #ffffff;
+  color: #1e293b;
   border-radius: 1.2rem;
-  box-shadow: 0 2px 24px rgba(0,0,0,0.18);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.08);
   padding: 2.5rem 1.5rem 2.5rem 1.5rem;
   margin-bottom: 3.5rem;
   max-width: 900px;
@@ -21,11 +21,11 @@
   gap: 1.5em;
 }
 .project-card {
-  background: #181f33;
+  background: #f8fafc;
   border-radius: 1em;
-  box-shadow: 0 1px 8px #0002;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.04);
   padding: 1.2em 1.5em;
-  color: #b6bfff;
+  color: #334155;
 }
 .project-header {
   display: flex;
@@ -36,17 +36,17 @@
 .project-title {
   font-size: 1.15em;
   font-weight: 600;
-  color: #7ecfff;
+  color: #6366f1;
 }
 .project-status {
-  background: #232c47;
-  color: #7ecfff;
+  background: #e0e7ff;
+  color: #6366f1;
   border-radius: 2em;
   padding: 0.35em 1em;
   font-size: 0.98em;
   font-weight: 500;
   letter-spacing: 0.02em;
-  box-shadow: 0 1px 6px #0002;
+  box-shadow: 0 1px 6px rgba(99,102,241,0.1);
 }
 .project-description {
   margin-bottom: 0.5em;
@@ -63,14 +63,14 @@
   list-style: none;
 }
 .project-feature-pill {
-  background: #232c47;
-  color: #7ecfff;
+  background: #e0e7ff;
+  color: #6366f1;
   border-radius: 2em;
   padding: 0.35em 1em;
   font-size: 0.98em;
   font-weight: 500;
   letter-spacing: 0.02em;
-  box-shadow: 0 1px 6px #0002;
+  box-shadow: 0 1px 6px rgba(99,102,241,0.1);
 }
 .project-tech-list {
   display: flex;
@@ -79,12 +79,12 @@
   margin-bottom: 0.5em;
 }
 .project-tech-pill {
-  background: #232c47;
-  color: #b6bfff;
+  background: #e0e7ff;
+  color: #6366f1;
   border-radius: 2em;
   padding: 0.35em 1em;
   font-size: 0.98em;
   font-weight: 500;
   letter-spacing: 0.02em;
-  box-shadow: 0 1px 6px #0002;
+  box-shadow: 0 1px 6px rgba(99,102,241,0.1);
 }

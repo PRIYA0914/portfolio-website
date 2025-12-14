@@ -1,7 +1,9 @@
 import React from 'react';
 
+
 import Header from './components/Header';
 import Hero from './components/Hero';
+import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Education from './components/Education';
@@ -9,7 +11,7 @@ import Experience from './components/Experience';
 import Contact from './components/Contact';
 import './styles/main.css';
 
-function FadeInSection({ children, delay = 0 }) {
+function FadeInSection({ children, delay = 0, id }) {
   const ref = React.useRef();
   const [isVisible, setVisible] = React.useState(false);
   React.useEffect(() => {
@@ -25,6 +27,7 @@ function FadeInSection({ children, delay = 0 }) {
   return (
     <div
       ref={ref}
+      id={id}
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? 'none' : 'translateY(40px)',
@@ -41,12 +44,13 @@ function App() {
     <div className="App">
       <Header />
       <main>
-        <FadeInSection><Hero /></FadeInSection>
-        <FadeInSection delay={0.1}><Skills /></FadeInSection>
-        <FadeInSection delay={0.2}><Projects /></FadeInSection>
-        <FadeInSection delay={0.3}><Experience /></FadeInSection>
-        <FadeInSection delay={0.4}><Education /></FadeInSection>
-        <FadeInSection delay={0.5}><Contact /></FadeInSection>
+        <FadeInSection id="home"><Hero /></FadeInSection>
+        <FadeInSection id="about" delay={0.1}><About /></FadeInSection>
+        <FadeInSection id="skills" delay={0.2}><Skills /></FadeInSection>
+        <FadeInSection id="projects" delay={0.3}><Projects /></FadeInSection>
+        <FadeInSection id="experience" delay={0.4}><Experience /></FadeInSection>
+        <FadeInSection id="education" delay={0.5}><Education /></FadeInSection>
+        <FadeInSection id="contact" delay={0.6}><Contact /></FadeInSection>
       </main>
      
     </div>
