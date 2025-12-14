@@ -14,7 +14,7 @@ export default function About() {
           </p>
         </div>
         <div className="about-image">
-          <img src="https://ui-avatars.com/api/?name=Priya+Dharshini+S&background=6366f1&color=fff&size=200" alt="Priya Dharshini S" />
+          <img src="./public/profile.jpg" alt="Priya Dharshini S" />
         </div>
       </div>
     </section>
