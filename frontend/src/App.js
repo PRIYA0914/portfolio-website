@@ -9,6 +9,8 @@ import Projects from './components/Projects';
 import Education from './components/Education';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
+import BackToTop from './components/BackToTop';
 import './styles/main.css';
 
 function FadeInSection({ children, delay = 0, id }) {
@@ -52,7 +54,8 @@ function App() {
         <FadeInSection id="education" delay={0.5}><Education /></FadeInSection>
         <FadeInSection id="contact" delay={0.6}><Contact /></FadeInSection>
       </main>
-     
+      <Footer />
+      <BackToTop />
     </div>
   );
 }
