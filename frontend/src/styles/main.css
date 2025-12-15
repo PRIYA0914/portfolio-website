@@ -1,3 +1,25 @@
+body {
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+  min-height: 100vh;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  color: #1e293b;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  margin-bottom: 4.5rem;
+  margin-top: 0;
+  transition: box-shadow 0.2s;
+}
+
+@media (max-width: 900px) {
+  section {
+    margin-bottom: 2.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
 /* Global Styles */
 * {
   box-sizing: border-box;

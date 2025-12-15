@@ -1,3 +1,5 @@
+import { HiMail } from 'react-icons/hi';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import React, { useState } from 'react';
 import '../styles/contact.css';
 
@@ -54,91 +56,80 @@ function Contact() {
   return (
     <section id="contact" className="contact-section">
       <div className="contact-container">
-        <div className="section-header">
-          <h2 className="contact-title">Contact</h2>
-          <p className="contact-subtitle">Let's discuss your project or just say hello!</p>
-        </div>
-        <div className="contact-content contact-row">
-          <div className="contact-info card">
-            <h3>Contact Information</h3>
-            <p className="contact-intro">
-              I'm always open to discussing new opportunities, creative projects, 
-              or simply having a conversation about technology and design.
-            </p>
-            <div className="contact-list">
-              {contactInfo.map((item, index) => (
-                <div key={index} className="contact-item">
-                  <span className="contact-icon-inner">{item.icon}</span>
-                  <div className="contact-details">
-                    <span className="contact-label">{item.label}</span>
-                    {item.link ? (
-                      <a 
-                        href={item.link} 
-                        className="contact-value"
-                        target={item.link.startsWith('http') ? '_blank' : '_self'}
-                        rel={item.link.startsWith('http') ? 'noopener noreferrer' : ''}
-                      >
-                        {item.value}
-                      </a>
-                    ) : (
-                      <span className="contact-value">{item.value}</span>
-                    )}
-                  </div>
-                </div>
-              ))}
+        <div className="contact-modern-row">
+          <div className="contact-modern-left">
+            <h2 className="contact-modern-title">Contact Me</h2>
+            <div className="contact-modern-desc">
+              I’m always open to new opportunities, collaborations, and exciting projects.<br />
+              If you’d like to connect, discuss ideas, or work together, feel free to reach out.
             </div>
-            <div className="availability">
-              <h4>Availability</h4>
-              <p>
-                <span className="status-indicator available"></span>
-                Available for freelance projects and full-time opportunities
-              </p>
+            <div className="contact-modern-details-list">
+              <div className="contact-modern-detail">
+                <span className="contact-modern-icon"><HiMail /></span>
+                <a href="mailto:priyasmpn9865@gmail.com" className="contact-modern-link">priyasmpn9865@gmail.com</a>
+              </div>
+              <div className="contact-modern-detail">
+                <span className="contact-modern-icon"><FaLinkedin /></span>
+                <a href="https://www.linkedin.com/in/priyadharshini2214" className="contact-modern-link" target="_blank" rel="noopener noreferrer">linkedin.com/in/priyadharshini2214</a>
+              </div>
+              <div className="contact-modern-detail">
+                <span className="contact-modern-icon"><FaGithub /></span>
+                <a href="https://github.com/PRIYA0914" className="contact-modern-link" target="_blank" rel="noopener noreferrer">github.com/PRIYA0914</a>
+              </div>
             </div>
           </div>
-          <div className="contact-form-container card">
-            <h3>Send a Message</h3>
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="name">Name *</label>
+          <div className="contact-modern-right">
+            <form className="contact-modern-form" onSubmit={handleSubmit}>
+              <div className="contact-modern-form-row">
+                <div className="contact-modern-form-group">
+                  <label htmlFor="firstName">First Name</label>
                   <input
                     type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
+                    id="firstName"
+                    name="firstName"
+                    value={formData.firstName || ''}
                     onChange={handleChange}
-                    required
-                    placeholder="Your full name"
+                    autoComplete="off"
                   />
                 </div>
-                <div className="form-group">
-                  <label htmlFor="email">Email *</label>
+                <div className="contact-modern-form-group">
+                  <label htmlFor="lastName">Last Name</label>
                   <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    value={formData.lastName || ''}
                     onChange={handleChange}
-                    required
-                    placeholder="your.email@example.com"
+                    autoComplete="off"
                   />
                 </div>
               </div>
-              <div className="form-group">
-                <label htmlFor="message">Message *</label>
+              <div className="contact-modern-form-group">
+                <label htmlFor="email">Email *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  autoComplete="off"
+                />
+              </div>
+              <div className="contact-modern-form-group">
+                <label htmlFor="message">Message</label>
                 <textarea
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  required
-                  rows="6"
-                  placeholder="Tell me about your project or just say hello!"
+                  rows="4"
+                  autoComplete="off"
                 ></textarea>
               </div>
-              <button type="submit" className="btn btn-primary btn-full">
-                Send Message
-              </button>
+              <div className="contact-modern-form-actions">
+                <button type="submit" className="contact-modern-send-btn">Send</button>
+              </div>
             </form>
           </div>
         </div>
