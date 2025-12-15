@@ -1,3 +1,366 @@
+/* Professional contact info row */
+.contact-split-detail-row {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  margin-bottom: 1em;
+  font-size: 1.08em;
+}
+.contact-split-detail-row:last-child {
+  margin-bottom: 0;
+}
+.contact-split-email-icon {
+  font-size: 1.25em;
+  color: #2563eb;
+  background: #e0e7ff;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-split-email {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.18s;
+  word-break: break-all;
+}
+.contact-split-email:hover {
+  color: #6366f1;
+  text-decoration: underline;
+}
+.contact-split-container {
+  background: #f8fafc;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 32px rgba(37,99,235,0.07);
+  display: flex;
+  max-width: 950px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem 2.5rem;
+  gap: 2.5rem;
+  position: relative;
+}
+.contact-split-left {
+  flex: 1 1 320px;
+  min-width: 260px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.2rem;
+  padding-right: 2rem;
+}
+.contact-split-right {
+  flex: 2 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2rem;
+}
+.contact-split-container::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 2.5rem;
+  bottom: 2.5rem;
+  width: 1.5px;
+  background: linear-gradient(180deg, #e0e7ff 0%, #c7d2fe 100%);
+  border-radius: 1px;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.contact-split-title {
+  font-size: 2.3rem;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #6366f1 0%, #2563eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.contact-split-subtitle {
+  font-size: 1.1rem;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+}
+.contact-split-desc {
+  font-size: 1rem;
+  color: #334155;
+  margin-bottom: 1.2rem;
+}
+.contact-split-info {
+  margin-top: 2.2rem;
+}
+.contact-split-email-row {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  margin-bottom: 1.2em;
+}
+.contact-split-email-icon {
+  font-size: 1.2em;
+}
+.contact-split-email {
+  color: #2563eb;
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 1.05em;
+}
+.contact-split-social-row {
+  display: flex;
+  gap: 1.1em;
+  margin-top: 0.5em;
+}
+.contact-split-social {
+  color: #2563eb;
+  font-size: 1.3em;
+  transition: color 0.18s;
+}
+.contact-split-social:hover {
+  color: #6366f1;
+}
+.contact-split-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+}
+.contact-split-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  margin-bottom: 1.1em;
+}
+.contact-split-form-group label {
+  color: #2563eb;
+  font-weight: 500;
+  margin-bottom: 0.2em;
+  font-size: 1em;
+}
+.contact-split-form-group input,
+.contact-split-form-group textarea {
+  background: #fff;
+  color: #1e293b;
+  border: 1.5px solid #2563eb;
+  border-radius: 0.2em;
+  padding: 0.6em 1em;
+  font-size: 1em;
+  transition: border 0.18s, background 0.18s;
+  font-family: inherit;
+}
+.contact-split-form-group input:focus,
+.contact-split-form-group textarea:focus {
+  border-color: #6366f1;
+  background: #f8fafc;
+  outline: none;
+}
+.contact-split-btn-row {
+  display: flex;
+  justify-content: flex-end;
+}
+.contact-split-btn {
+  background: linear-gradient(90deg, #6366f1 0%, #2563eb 100%);
+  color: #fff;
+  border: none;
+  border-radius: 0.2em;
+  padding: 0.6em 2.2em;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  font-family: inherit;
+  box-shadow: 0 2px 8px #2563eb22;
+}
+.contact-split-btn:hover {
+  background: linear-gradient(90deg, #2563eb 0%, #6366f1 100%);
+  color: #fff;
+}
+@media (max-width: 900px) {
+  .contact-split-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+  .contact-split-left, .contact-split-right {
+    max-width: 100%;
+    min-width: 0;
+    align-items: flex-start;
+    padding: 0;
+  }
+  .contact-split-container::before {
+    display: none;
+  }
+}
+/* --- Custom Split Contact Section Styles (Wix-like) --- */
+.contact-split-bg {
+  background: #f8f5f2;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+}
+/* --- Custom Split Contact Section Styles (Portfolio Color Match) --- */
+.contact-split-bg {
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+}
+.contact-split-container {
+  background: #f8fafc;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.04);
+  display: flex;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem 3rem;
+  gap: 2.5rem;
+}
+.contact-split-title {
+  font-size: 2.7rem;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #6366f1 0%, #2563eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.contact-split-subtitle {
+  font-size: 1.2rem;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+}
+.contact-split-desc {
+  font-size: 1rem;
+  color: #334155;
+  margin-bottom: 1.2rem;
+}
+.contact-split-email {
+  color: #2563eb;
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 1.05em;
+}
+.contact-split-social {
+  color: #2563eb;
+  font-size: 1.3em;
+  transition: color 0.18s;
+}
+.contact-split-social:hover {
+  color: #6366f1;
+}
+.contact-split-form-group label {
+  color: #2563eb;
+  font-weight: 500;
+  margin-bottom: 0.2em;
+  font-size: 1em;
+}
+.contact-split-form-group input,
+.contact-split-form-group textarea {
+  background: #fff;
+  color: #1e293b;
+  border: 1.5px solid #2563eb;
+  border-radius: 0.2em;
+  padding: 0.6em 1em;
+  font-size: 1em;
+  transition: border 0.18s, background 0.18s;
+  font-family: inherit;
+}
+.contact-split-form-group input:focus,
+.contact-split-form-group textarea:focus {
+  border-color: #6366f1;
+  background: #f8fafc;
+  outline: none;
+}
+.contact-split-btn {
+  background: linear-gradient(90deg, #6366f1 0%, #2563eb 100%);
+  color: #fff;
+  border: none;
+  border-radius: 0.2em;
+  padding: 0.6em 2.2em;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  font-family: inherit;
+  box-shadow: 0 2px 8px #2563eb22;
+}
+  
+.contact-split-btn:hover {
+  background: linear-gradient(90deg, #2563eb 0%, #6366f1 100%);
+  color: #fff;
+}
+.contact-split-form-group label {
+  color: #2563eb;
+  font-weight: 500;
+  margin-bottom: 0.2em;
+  font-size: 1em;
+}
+.contact-split-form-group input,
+.contact-split-form-group textarea {
+  background: #fff;
+  color: #7c6a5c;
+  border: 1.5px solid #2563eb;
+  border-radius: 0.2em;
+  padding: 0.6em 1em;
+  font-size: 1em;
+  transition: border 0.18s, background 0.18s;
+  font-family: inherit;
+}
+.contact-split-form-group input:focus,
+.contact-split-form-group textarea:focus {
+  border-color: #7c6a5c;
+  background: #f8f5f2;
+  outline: none;
+}
+.contact-split-btn-row {
+  display: flex;
+  justify-content: flex-end;
+}
+.contact-split-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 0.2em;
+  padding: 0.6em 2.2em;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  font-family: inherit;
+  box-shadow: 0 2px 8px #a05a2c22;
+}
+.contact-split-btn:hover {
+  background: #7c6a5c;
+  color: #fff;
+}
+@media (max-width: 900px) {
+  .contact-split-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+  .contact-split-left, .contact-split-right {
+    max-width: 100%;
+    min-width: 0;
+    align-items: flex-start;
+  }
+}
 .contact-modern-details-list {
   display: flex;
   flex-direction: column;
