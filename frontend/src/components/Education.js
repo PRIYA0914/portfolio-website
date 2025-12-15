@@ -4,8 +4,8 @@ import React from 'react';
 const EDUCATION = [
   {
     degree: "Bachelor of Computer Science",
-    institution: "Anna University",
-    period: "2021 - 2025",
+    institution: "Annapoorana Engineering College",
+    period: "2023 - 2027",
     location: "Tamil Nadu, India",
     status: "In Progress",
     gpa: "8.5/10",

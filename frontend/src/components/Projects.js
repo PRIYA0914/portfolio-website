@@ -3,17 +3,17 @@ import React from 'react';
 
 const PROJECTS = [
   {
-    title: "Online Cake Order System",
-    description: "Developed a full-stack web application for online cake ordering with user authentication and cart functionality. Implemented RESTful APIs and MongoDB schemas for order management and real-time tracking. Built an admin panel to manage products, orders, and users efficiently.",
-    tech: ["MERN Stack"],
+    title: "Portfolio Website",
+    description: "Designed and developed a responsive personal portfolio website to showcase skills, projects, and experience. Integrated a real-time contact form that allows recruiters to directly reach out via email, following clean UI and component-based development practices.",
+    tech: ["React.js", "JavaScript", "HTML", "CSS", "EmailJS"],
     features: [
-      "User authentication and cart functionality",
-      "RESTful APIs and MongoDB schemas",
-      "Order management and real-time tracking",
-      "Admin panel for products, orders, users"
+      "Responsive and modern UI design",
+      "Real-time contact form with email notifications",
+      "Component-based architecture using React",
+      "Deployed for public access"
     ],
-    status: "Internship: iNeuron Intelligence Pvt Ltd (Nov 2024)",
-    link: "#"
+    status: "Completed",
+    link: "https://github.com/PRIYA0914/portfolio-website"
   },
   {
     title: "Inventory Management System",
@@ -25,7 +25,7 @@ const PROJECTS = [
       "Offline access with Async Storage"
     ],
     status: "Completed",
-    link: "#"
+    link: "https://github.com/PRIYA0914/Inventory-Management-system"
   },
   {
     title: "Secure Chat Application",
@@ -37,7 +37,7 @@ const PROJECTS = [
       "Fast message delivery and real-time interaction"
     ],
     status: "Completed",
-    link: "#"
+    link: "https://github.com/PRIYA0914/Tic-Tac-Toe-game"
   },
   {
     title: "Food Go – UI/UX Design Project",
@@ -50,7 +50,7 @@ const PROJECTS = [
       "Focus on usability and visual hierarchy"
     ],
     status: "Design Project",
-    link: "#"
+    link: "https://www.linkedin.com/posts/priyadharshini2214_figma-uidesign-foodorderingapp-activity-7242545418021076994-kdWu?utm_source=share&utm_medium=member_android&rcm=ACoAAEokX6MB9eICCe551dY2mvOQfzj6_dI-mUs"
   },
   {
     title: "Mini Projects",
@@ -62,7 +62,7 @@ const PROJECTS = [
       "Stopwatch App – Utility app with start, pause, reset functionality."
     ],
     status: "Completed",
-    link: "#"
+    link: "https://github.com/PRIYA0914/Tic-Tac-Toe-game"
   }
 ];
 
