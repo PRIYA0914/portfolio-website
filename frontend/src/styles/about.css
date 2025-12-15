@@ -1,19 +1,106 @@
-/* About Section Styles */
-.about-section {
-  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 50%, #f8fafc 100%);
-  color: #1e293b;
-  padding: 100px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 70vh;
+.about-icon {
+  display: inline-block;
+  margin-bottom: 0.5em;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2.2rem;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #6366f1 0%, #2563eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.2em;
+  display: block;
   position: relative;
+  text-shadow: 0 2px 10px rgba(99,102,241,0.08);
+  margin-top: 0;
+}
+
+.section-subtitle {
+  color: #64748b;
+  font-size: 1.1rem;
+  margin-bottom: 0.5em;
+}
+.about-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.about-left {
+  flex: 1 1 220px;
+  min-width: 520px;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.about-right {
+  flex: 2 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .about-left, .about-right {
+    max-width: 100%;
+    min-width: 0;
+    align-items: flex-start;
+  }
+}
+/* About Section Styles */
+.about-section.card {
+  background: #fff;
+  color: #1e293b;
+  border-radius: 1rem;
+  box-shadow: 0 2px 16px 0 rgba(99,102,241,0.08), 0 1px 4px rgba(0,0,0,0.03);
+  border: 1px solid #e0e7ff;
+  padding: 1.5rem 1.2rem 1.5rem 1.2rem;
+  margin-bottom: 2.5rem;
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   overflow: hidden;
 }
 
-.about-section::before {
+.about-section.card::before {
   content: '';
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(90deg, #e0e7ff 0%, #f8fafc 100%);
+  opacity: 0.45;
+  z-index: 0;
+}
+
+.about-section.card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.about-section.card::after {
   top: 0;
   left: 0;
   right: 0;
@@ -32,6 +119,7 @@
 
 .about-card {
   background: rgba(255, 255, 255, 0.95);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 3rem;
@@ -133,109 +221,120 @@
 
 .stat-item {
   text-align: center;
-  padding: 1.5rem;
-  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
-  border-radius: 12px;
-  border: 1px solid rgba(99, 102, 241, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-.stat-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.15);
-}
 
-.stat-number {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #6366f1;
-  margin-bottom: 0.5rem;
-  display: block;
-}
+  /* About Section - Match Projects Section UI */
 
-.stat-label {
-  font-size: 0.9rem;
-  color: #64748b;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
 
-@media (max-width: 768px) {
-  .about-section {
-    padding: 60px 20px;
-    min-height: 60vh;
-  }
-  
-  .about-card {
-    padding: 2rem;
-  }
-  
-  .about-header {
-    flex-direction: column;
+  .section-header {
     text-align: center;
-    gap: 0.5rem;
+    margin-bottom: 2.2rem;
   }
-  
-  .about-icon {
-    font-size: 2rem;
-  }
-  
-  .about-title {
+
+  .section-title {
     font-size: 2.2rem;
-    text-align: center;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #6366f1 0%, #2563eb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.2em;
+    display: block;
+    position: relative;
+    text-shadow: 0 2px 10px rgba(99,102,241,0.08);
+    margin-top: 0;
   }
-  
-  .about-subtitle {
-    font-size: 1.1rem;
-    text-align: center;
-  }
-  
-  .about-subtitle::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .about-description {
-    font-size: 1rem;
-  }
-  
-  .about-stats {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  
-  .stat-item {
-    padding: 1rem;
-  }
-  
-  .stat-number {
-    font-size: 2rem;
-  }
-}
 
-@media (max-width: 480px) {
-  .about-section {
-    padding: 40px 20px;
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .about-card {
-    padding: 1.5rem;
-  }
-  
-  .about-title {
-    font-size: 1.8rem;
-  }
-  
-  .about-subtitle {
-    font-size: 1rem;
-  }
-  
+
   .about-description {
-    font-size: 0.95rem;
+    max-width: 650px;
+    text-align: center;
+    font-size: 1.15rem;
+    color: #334155;
   }
-  
-  .stat-number {
-    font-size: 1.8rem;
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 2.2rem;
+  }
+
+  .about-icon {
+    display: inline-block;
+    margin-bottom: 0.5em;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #6366f1 0%, #2563eb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.2em;
+    display: block;
+    position: relative;
+    text-shadow: 0 2px 10px rgba(99,102,241,0.08);
+  }
+
+  .section-subtitle {
+    color: #64748b;
+    font-size: 1.1rem;
+    margin-bottom: 0.5em;
+  }
+
+  .about-description-wrapper {
+    margin-bottom: 2rem;
+  }
+
+  .about-description {
+    font-size: 1.1rem;
+    color: #334155;
+    margin-bottom: 0.7em;
+  }
+
+  .highlight {
+    color: #6366f1;
+    font-weight: 600;
+  }
+
+  .about-stats.skills-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .stat-item.skill-card.card {
+    background: #f8fafc;
+    border-radius: 1em;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+    padding: 1.2em 1.5em;
+    color: #334155;
+    text-align: center;
+    min-width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .stat-number.skill-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #6366f1;
+    margin-bottom: 0.2em;
+  }
+
+  .stat-label {
+    font-size: 1.05em;
+    color: #64748b;
   }
 }

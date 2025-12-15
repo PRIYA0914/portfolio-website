@@ -3,42 +3,19 @@ import '../styles/about.css';
 
 export default function About() {
   return (
-    <section id="about" className="about-section">
-      <div className="about-container">
-        <div className="about-card">
-          <div className="about-header">
-            <div className="about-icon">
-              <span>👋</span>
-            </div>
-            <h2 className="about-title">Hello, I'm Priya Dharshini S</h2>
-          </div>
-          
-          <h3 className="about-subtitle">Full-Stack Web & Mobile App Developer</h3>
-          
-          <div className="about-description-wrapper">
-            <p className="about-description">
-              I'm a passionate developer with a strong interest in UI/UX design. I enjoy building clean, scalable, and user-friendly applications using <span className="highlight">React</span>, <span className="highlight">React Native</span>, and the <span className="highlight">MERN stack</span>.
-            </p>
-            <p className="about-description">
-              With hands-on experience through internships and real-world projects, I focus on turning ideas into reliable digital solutions while continuously improving performance, usability, and design quality.
-            </p>
-          </div>
-          
-          <div className="about-stats">
-            <div className="stat-item">
-              <div className="stat-number">5+</div>
-              <div className="stat-label">Projects Completed</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">2+</div>
-              <div className="stat-label">Years Experience</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">10+</div>
-              <div className="stat-label">Technologies</div>
-            </div>
-          </div>
-        </div>
+    <section id="about" className="about-section card">
+      <div className="section-header" style={{textAlign: 'center', marginBottom: '2.2rem'}}>
+        <span className="about-icon" title="About">
+          <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="10" rx="5" fill="#2563eb"/><rect x="7" y="11" width="10" height="2" rx="1" fill="#fff"/></svg>
+        </span>
+        <h2 className="section-title">About</h2>
+        <p className="section-subtitle">A brief introduction</p>
+      </div>
+      <div className="about-content" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+        <p className="about-description" style={{maxWidth: 650, textAlign: 'center', fontSize: '1.15rem', color: '#334155'}}>
+          I’m Priya Dharshini S, a full-stack web and mobile app developer who values clean code and thoughtful design. I work with React, React Native, Node.js, and MongoDB to build user-friendly applications.<br /><br />
+          With a background in UI/UX design, I focus on creating digital experiences that are both functional and intuitive.
+        </p>
       </div>
     </section>
   );
