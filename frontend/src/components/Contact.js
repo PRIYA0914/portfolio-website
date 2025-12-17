@@ -4,7 +4,7 @@ import { HiMail } from 'react-icons/hi';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import '../styles/contact.css';
 
-emailjs.init('x0xbra4upzaUHer5W');
+emailjs.init(process.env.REACT_APP_EMAILJS_USER);
 
 const Contact = () => {
   const formRef = useRef();
@@ -12,10 +12,10 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs.sendForm(
-      'service_gg6o2yn',
-      'template_mg8c7rg',
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
       formRef.current,
-      'x0xbra4upzaUHer5W'
+      process.env.REACT_APP_EMAILJS_USER
     )
     .then(() => {
       alert('Message sent successfully!');
