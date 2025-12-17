@@ -1,0 +1,19 @@
+# Node modules
+node_modules/
+frontend/node_modules/
+
+# Build outputs
+frontend/build/
+frontend/dist/
+
+# Caches
+frontend/node_modules/.cache/
+frontend/.cache/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
